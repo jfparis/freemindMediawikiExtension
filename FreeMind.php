@@ -33,6 +33,7 @@ function renderMindmap($input)
 
     $mm_title = "";
     $mm_description = "";
+    $mm_notitle = 0;
 
     $paramVector = explode("|", $input);
     $url = $paramVector[0];
@@ -88,6 +89,7 @@ function renderMindmap($input)
 
     global $wgServer, $wgScriptPath, $wgTitle, $wgUrlProtocols, $wgUser;
     static $flashContentCounter = 0;
+    static $Formcounter = 0;
     if ($mm_type === "flash") {
         $params['initLoadFile'] = $url;
         if (isset($params['openUrl'])) unset($params['openUrl']);
@@ -127,7 +129,7 @@ function renderMindmap($input)
             $ref .= "$key=$value&";
         }
         $ref = substr($ref, 0, -1);
-        $output .= "<a href=$ref>$mm_description</a>";
+        $output = "<a href=$ref>$mm_description</a>";
     }
     // print($output);
     if ($mm_target == "embedded")
