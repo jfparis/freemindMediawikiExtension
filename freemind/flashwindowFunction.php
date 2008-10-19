@@ -10,7 +10,7 @@ if($mm_title != ""){
 .'<div id="flashcontent'.$flashContentCounter.'"> Flash plugin or Javascript are turned off. Activate both  and reload to view the mindmap</div>
 <script type="text/javascript">
 // <![CDATA[
-var fo = new FlashObject("'.$path.'visorFreemind.swf", "'.$path.'visorFreeMind", "100%", "'.$mm_height.'", 6, "'.$mm_bgcolor.'");
+var fo = new FlashObject("'.$path.'visorFreemind.swf", "'.$path.'visorFreeMind", "100%", "'.$mm_height.'", 6, "");
 fo.addParam("quality", "high");
 fo.addParam("bgcolor", "#ffffff");
 ';
